@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+:root {
+    --background-color: #212121
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: var(--background-color);
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 100;
+}
