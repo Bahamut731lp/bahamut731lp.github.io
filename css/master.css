@@ -8,19 +8,86 @@ body {
     margin: 0;
     background: var(--background-color);
     color: white;
+}
+
+section {
+    height: 100vh;
+}
+
+.contact {
+    height: auto;
+}
+
+.landing {
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-h1 {
-    font-size: 3rem;
+.title {
+    font-size: 5rem;
     text-transform: uppercase;
 }
 
-h3 {
+.description {
     font-size: 2rem;
     font-weight: 100;
 }
+
+.projects {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-template-rows: 16% 16% 16% 16% 16% 16%;
+}
+
+.grid > * {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-position: 100%;
+    background-size: 200% 100%;
+    transition: 0.3s;
+}
+
+.pcpittner {
+    background-image: linear-gradient(to left, #4facfe 0%, #00f2fe 100%);
+}
+
+.pcpittner:hover {
+    background-position: 0;
+    box-shadow: 0px 6px 19px -5px #4facfe;
+}
+
+.pcpittner:focus {
+    animation: pcpittner_pulse 0.3s;
+    box-shadow: 0 0 0 2em rgba(#fff,0);
+    outline: none;
+}
+
+.contact {
+    text-align: center;
+}
+
+@keyframes pcpittner_pulse {
+  0% { box-shadow: 0 0 0 0 #00f2feFF; }
+  100% { box-shadow: 0 0 0 15px #00f2fe00;}
+}
+
+.html { background: rgba(241, 101, 41)}
+.css { background: rgba(41, 101, 241)}
+.js { background: rgba(247, 223, 30)}
+.react { background: rgba(97, 218, 251)}
+.nodejs { background: rgba(128, 189, 1)}
