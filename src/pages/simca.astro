@@ -1,0 +1,153 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import DeerLogo from '../components/DeerLogo.astro';
+import { SITE_TITLE } from '../consts';
+
+const pillars = [
+  {
+    icon: '✦',
+    title: 'Imagination',
+    body: 'Creating space for wonder and creative exploration. Every lesson is an invitation to see the world through fresh eyes.',
+  },
+  {
+    icon: '◇',
+    title: 'Expression',
+    body: "Nurturing each child's unique voice — through drawing, movement, storytelling, or whatever form feels most true to them.",
+  },
+  {
+    icon: '○',
+    title: 'Discovery',
+    body: 'Learning as an adventure. Building curiosity, confidence, and the joy of finding out something new each day.',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Simča Daňková — Creative Teaching | ${SITE_TITLE}`}
+      description="Simča Daňková — creative teacher weaving art, imagination, and curiosity into education."
+    />
+  </head>
+  <body class="bg-bg text-cream">
+    <Header />
+
+    <!-- ══════════════════════ HERO ══════════════════════ -->
+    <section class="hero-bg-simca relative min-h-[85vh] flex flex-col justify-center overflow-hidden pt-[72px]">
+      <div class="max-w-[1200px] mx-auto px-8 relative z-[1] flex items-center justify-between gap-12 py-16 max-md:flex-col max-md:items-start">
+
+        <div class="flex-shrink-0 opacity-90 max-md:self-center">
+          <DeerLogo size={180} />
+        </div>
+
+        <div class="flex-1 text-right max-md:text-left">
+          <p class="section-label max-md:text-left">Creative Teaching</p>
+          <h1
+            class="font-display font-bold text-cream leading-[1.05] mt-3"
+            style="font-size: clamp(3.5rem, 7vw, 6.5rem)"
+          >Simča<br />Daňková</h1>
+          <span class="gold-rule ml-auto mr-0 max-md:ml-0"></span>
+          <p class="text-[1.1rem] text-muted max-w-[400px] leading-[1.7] m-0 ml-auto max-md:ml-0 max-md:text-left">
+            Nurturing curiosity, creativity, and the courage to create.
+          </p>
+        </div>
+
+      </div>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div class="w-px h-11 bg-gradient-to-b from-gold to-transparent mx-auto [animation:scrollPulse_2s_ease-in-out_1s_infinite]"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ ABOUT ══════════════════════ -->
+    <section class="py-28 bg-bg-2 border-t border-cream/[7%] border-b border-cream/[7%]">
+      <div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 gap-20 items-start md:grid-cols-2">
+
+        <div>
+          <p class="section-label">About</p>
+          <h2
+            class="font-display font-normal text-cream mt-[0.4rem] leading-[1.3]"
+            style="font-size: clamp(1.8rem, 3vw, 2.5rem)"
+          >The heart<br /><em class="italic text-gold">behind the work.</em></h2>
+          <span class="gold-rule"></span>
+          <p class="text-[0.97rem] text-cream/85 leading-[1.8] mb-5">
+            I'm Simča — a creative teacher who believes that every child carries an
+            artist within them. My work is about finding that spark and giving it room
+            to breathe, grow, and eventually flourish.
+          </p>
+          <p class="text-[0.97rem] text-cream/85 leading-[1.8] mb-5">
+            Whether in a classroom, an art studio, or out in nature, I try to bring
+            the same thing: presence, warmth, and genuine delight in the process of
+            making and discovering.
+          </p>
+          <p class="text-[0.78rem] text-gold/60 italic border-l-2 border-gold pl-3">
+            ✦ Replace this bio with your own story.
+          </p>
+        </div>
+
+        <div class="photo-placeholder relative aspect-[3/4] w-full rounded-sm">
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <DeerLogo size={110} class="opacity-[10%]" />
+          </div>
+          <div class="absolute bottom-5 right-5 w-11 h-11 border border-gold flex items-center justify-center font-display text-[1.1rem] text-gold">S</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════ PILLARS ═══════════════════════ -->
+    <section class="py-28">
+      <div class="max-w-[1200px] mx-auto px-8">
+
+        <header class="mb-14">
+          <p class="section-label">Philosophy</p>
+          <h2
+            class="font-display font-normal text-cream mt-[0.4rem] leading-[1.25]"
+            style="font-size: clamp(1.8rem, 3.5vw, 2.75rem)"
+          >A creative<br /><em class="italic text-gold">approach.</em></h2>
+          <span class="gold-rule"></span>
+        </header>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {pillars.map(({ icon, title, body }) => (
+            <div class="p-10 border border-cream/[7%] rounded-sm bg-surface transition-[border-color,transform] duration-300 hover:border-gold hover:-translate-y-1">
+              <span class="block text-[1.2rem] text-gold leading-none mb-5">{icon}</span>
+              <h3 class="font-display text-[1.35rem] font-semibold text-cream mb-[0.9rem]">{title}</h3>
+              <p class="text-[0.9rem] text-muted leading-[1.75] m-0">{body}</p>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════ QUOTE ══════════════════════ -->
+    <section class="py-20 bg-bg-2 border-t border-cream/[7%] border-b border-cream/[7%]">
+      <div class="max-w-[1200px] mx-auto px-8">
+        <blockquote class="max-w-[680px] mx-auto text-center border-none p-0">
+          <p
+            class="font-display italic text-cream leading-[1.5] mb-5"
+            style="font-size: clamp(1.3rem, 2.5vw, 1.8rem)"
+          >"Creativity is not a talent. It is a way of operating."</p>
+          <footer class="text-[0.75rem] tracking-[0.18em] uppercase text-gold">— John Cleese</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CTA ═══════════════════════ -->
+    <section class="py-20 border-t border-gold/[18%]">
+      <div class="max-w-[1200px] mx-auto px-8 flex flex-col items-center text-center gap-5">
+        <DeerLogo size={52} class="opacity-70" />
+        <p class="font-display italic text-[1.3rem] text-muted m-0">Stories from the classroom and beyond</p>
+        <a
+          href="/blog"
+          class="text-[0.78rem] tracking-[0.16em] uppercase text-cream no-underline border-b border-gold pb-[0.2rem] transition-colors duration-200 hover:text-gold"
+        >Read the blog →</a>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>

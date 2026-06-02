@@ -1,0 +1,200 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import DeerLogo from '../components/DeerLogo.astro';
+import { SITE_TITLE } from '../consts';
+
+const activities = [
+  {
+    domain: 'Sport',
+    title: 'Floorball Referee',
+    description: 'Licensed referee keeping the game fair, fast, and clean — from whistle to final call.',
+    tags: ['Czech Superleague', 'Match officiating'],
+    image: null as string | null,
+  },
+  {
+    domain: 'Broadcast',
+    title: 'Superleague Broadcasts',
+    description: 'Behind the lens and at the controls for live Superleague coverage — from pre-game setup to the final whistle and post-match edit.',
+    tags: ['Live production', 'Czech Floorball'],
+    image: null as string | null,
+  },
+  {
+    domain: 'Media',
+    title: 'Video Editing',
+    description: 'Post-production work that turns raw footage into something worth watching — sport highlights, events, and the moments in between.',
+    tags: ['Post-production', 'Highlights & edits'],
+    image: null as string | null,
+  },
+  {
+    domain: 'Software',
+    title: 'Developer & Vision Engineer',
+    description: 'Building production software and working on computer vision at Cloudcode — clean systems, sharp eyes, code that holds up under pressure.',
+    tags: ['Cloudcode', 'Software engineering', 'Computer vision'],
+    image: null as string | null,
+  },
+  {
+    domain: 'Cybernetics',
+    title: 'Doctoral Candidate',
+    description: 'Doctoral study in Technical Cybernetics — exploring the deep territory where control theory, automation, and artificial intelligence converge.',
+    tags: ['Technical Cybernetics', 'Doctoral programme'],
+    image: null as string | null,
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={`Kevin Daněk — ${SITE_TITLE}`}
+      description="Kevin Daněk — software engineer, floorball referee, Superleague broadcaster, video editor, and doctoral researcher in Technical Cybernetics."
+    />
+  </head>
+  <body class="bg-bg text-cream">
+    <Header />
+
+    <!-- ══════════════════════ HERO ══════════════════════ -->
+    <section class="hero-bg-kevin relative min-h-[85vh] flex flex-col justify-center overflow-hidden pt-[72px]">
+      <div class="max-w-[1200px] mx-auto px-8 relative z-[1] flex items-center justify-between gap-12 py-16 max-md:flex-col-reverse max-md:items-start">
+
+        <div class="flex-1">
+          <p class="section-label">Software · Research · Sport · Media</p>
+          <h1
+            class="font-display font-bold text-cream leading-[1.05] mt-3"
+            style="font-size: clamp(3.5rem, 7vw, 6.5rem)"
+          >Kevin<br />Daněk</h1>
+          <span class="gold-rule"></span>
+          <p class="text-[1.1rem] text-muted max-w-[420px] leading-[1.7] m-0">
+            Engineer. Researcher. Referee. Creator.<br />
+            <span class="text-[0.9rem]">Doing many things — and doing them properly.</span>
+          </p>
+        </div>
+
+        <div class="flex-shrink-0 opacity-90 max-md:self-center">
+          <DeerLogo size={180} />
+        </div>
+
+      </div>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div class="w-px h-11 bg-gradient-to-b from-gold to-transparent mx-auto [animation:scrollPulse_2s_ease-in-out_1s_infinite]"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════ ABOUT ══════════════════════ -->
+    <section class="py-28 bg-bg-2 border-t border-cream/[7%] border-b border-cream/[7%]">
+      <div class="max-w-[1200px] mx-auto px-8 grid grid-cols-1 gap-20 items-start md:grid-cols-2">
+
+        <div class="photo-placeholder relative aspect-[3/4] w-full rounded-sm">
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <DeerLogo size={110} class="opacity-[10%]" />
+          </div>
+          <div class="absolute bottom-5 left-5 w-11 h-11 border border-gold flex items-center justify-center font-display text-[1.1rem] text-gold">K</div>
+        </div>
+
+        <div>
+          <p class="section-label">About</p>
+          <h2
+            class="font-display font-normal text-cream mt-[0.4rem] leading-[1.3]"
+            style="font-size: clamp(1.8rem, 3vw, 2.5rem)"
+          >The person<br /><em class="italic text-gold">behind it all.</em></h2>
+          <span class="gold-rule"></span>
+          <p class="text-[0.97rem] text-cream/85 leading-[1.8] mb-5">
+            I'm Kevin — and I've never been good at doing just one thing. By day I write
+            code and conduct research; on weekends I'm on a floorball court with a whistle,
+            or behind a camera broadcasting the game live. Somehow it all fits together.
+          </p>
+          <p class="text-[0.97rem] text-cream/85 leading-[1.8] mb-5">
+            The common thread is precision: whether it's a line of code, a referee's call,
+            or a cut in the edit — I care about getting it right. My doctoral work in
+            Technical Cybernetics keeps that drive honest.
+          </p>
+          <p class="text-[0.78rem] text-gold/60 italic border-l-2 border-gold pl-3">
+            ✦ Replace this bio with your own story.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════ ACTIVITIES ══════════════════════ -->
+    <section class="border-t border-cream/[7%]">
+
+      <div class="max-w-[1200px] mx-auto px-8 pt-20 pb-14">
+        <p class="section-label">What I do</p>
+        <h2
+          class="font-display font-normal text-cream mt-[0.4rem] leading-[1.25]"
+          style="font-size: clamp(1.8rem, 3.5vw, 2.75rem)"
+        >Many worlds,<br /><em class="italic text-gold">one person.</em></h2>
+        <span class="gold-rule"></span>
+      </div>
+
+      <div class="divide-y divide-cream/[7%]">
+        {activities.map(({ domain, title, description, tags, image }, i) => (
+          <div class:list={[
+            'group flex flex-col md:flex-row md:min-h-[500px]',
+            i % 2 !== 0 && 'md:flex-row-reverse',
+          ]}>
+
+            <!-- Photo: 58% width -->
+            <div class="relative w-full aspect-[16/9] md:aspect-auto md:w-[58%] overflow-hidden flex-shrink-0">
+              {image
+                ? <img
+                    src={image}
+                    alt={title}
+                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                : <div class="absolute inset-0 photo-placeholder">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <DeerLogo size={90} class="opacity-[7%]" />
+                    </div>
+                    <span class="absolute bottom-4 right-5 text-[0.55rem] tracking-[0.2em] uppercase text-cream/[8%] select-none">
+                      add photo here
+                    </span>
+                  </div>
+              }
+            </div>
+
+            <!-- Text: remaining width -->
+            <div class:list={[
+              'flex flex-col justify-center px-10 py-14 md:px-14',
+              i % 2 !== 0 ? 'md:items-end md:text-right' : '',
+            ]}>
+              <p class="section-label mb-3">{domain}</p>
+              <h3
+                class="font-display font-semibold text-cream leading-snug mb-0"
+                style="font-size: clamp(1.5rem, 2.5vw, 2rem)"
+              >{title}</h3>
+              <span class:list={['gold-rule', i % 2 !== 0 ? 'ml-auto mr-0' : '']}></span>
+              <p class="text-[0.92rem] text-muted leading-[1.75] mb-5 max-w-[380px]">{description}</p>
+              <div class:list={['flex flex-wrap gap-[0.4rem]', i % 2 !== 0 ? 'justify-end' : '']}>
+                {tags.map(tag => (
+                  <span class="text-[0.6rem] tracking-[0.1em] uppercase text-gold/70 border border-gold/25 px-[0.55rem] py-[0.2rem] rounded-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════ CTA ═══════════════════════ -->
+    <section class="py-20 bg-bg-2 border-t border-gold/[18%]">
+      <div class="max-w-[1200px] mx-auto px-8 flex flex-col items-center text-center gap-5">
+        <DeerLogo size={52} class="opacity-70" />
+        <p class="font-display italic text-[1.3rem] text-muted m-0">Thoughts from the terminal and beyond</p>
+        <a
+          href="/blog"
+          class="text-[0.78rem] tracking-[0.16em] uppercase text-cream no-underline border-b border-gold pb-[0.2rem] transition-colors duration-200 hover:text-gold"
+        >Read the blog →</a>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
